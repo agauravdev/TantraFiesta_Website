@@ -11,6 +11,7 @@ html
 
    background-size:cover;
 }
+
 #stars {
 	width: 1px;
 	height: 1px;
@@ -81,7 +82,81 @@ html
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
+.main {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 850px;
+  height: 480px;
+}
 
+h1 {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #F6F4F3;
+}
+h1 sup {
+	text-transform: lowercase;
+	color: #FF3E41;
+}
+footer
+{
+	position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+	height: 17.5%;
+	text-align: center;
+}
+
+#countdown {
+  color: #FFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  letter-spacing: 5px;
+  margin-top: 5%;
+
+}
+
+.days, .hours, .minutes, .seconds, .left {
+  display: inline-block;
+  padding: 15px;
+  width: 100px;
+  border-radius: 10px;
+	c
+
+}
+
+.days {
+  background: #D87200;
+}
+
+.hours {
+  background:  #FF3E41;
+}
+
+.minutes {
+  background: #FFB20C;
+}
+
+.seconds {
+  background:  #2186FF;
+}
+
+.left {
+	background: #E10A0A;
+}
+.c-number {
+  font-family: "Montserrat", sans-serif;
+  color: #FFF;
+  font-size: 1em;
+}
 @keyframes animStar {
 	from {
 		transform: translateY(0px);
@@ -97,7 +172,7 @@ body{
 
 #loading{
 	margin-top: 5%;
-	display: block;
+	/* display: block; */
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -127,28 +202,8 @@ body{
 	}
 }
 
-#container {
-	color: #333;
-	text-align: center;
-	margin-right: 3%;
-}
 
-h1 {
-	font-weight: normal;
-}
 
-li {
-	display: inline-block;
-	font-size: 1.5em;
-	list-style-type: none;
-	padding: 1em;
-	text-transform: uppercase;
-}
-
-li span {
-	display: block;
-	font-size: 4.5rem;
-}
 
 
 /* Smartphones (portrait and landscape) ----------- */

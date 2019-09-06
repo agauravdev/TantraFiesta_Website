@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-	<style type="text/css">
-		
-		
 
-		
-	</style>
+<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Rubik+Mono+One&display=swap" rel="stylesheet">
 
 	<meta charset="UTF-8">
 	<title>TantraFiesta</title>
@@ -20,53 +16,44 @@
 <body>
 	<!-- partial:index.partial.html -->
 	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-	<img id="logo" src="assets/images/tf.png">
-	
-	
-	
+
+
+
+
 	<div id='stars'></div>
 	<div id='stars2'></div>
 	<div id='stars3'></div>
 	<div id="loading">
-		<div id="container">
-		<ul>
-			<li><span id="days"></span>days</li>
-			<li><span id="hours"></span>Hours</li>
-			<li><span id="minutes"></span>Minutes</li>
-			<li><span id="seconds"></span>Seconds</li>
-		</ul>
-	</div>
+		<img id="logo" src="assets/images/tf.png">
+	<!-- <div id="clockdiv">
+	  <div>
+	    <span class="days" id="day"></span>
+	    <div class="smalltext">Days</div>
+	  </div>
+	  <div>
+	    <span class="hours" id="hour"></span>
+	    <div class="smalltext">Hours</div>
+	  </div>
+	  <div>
+	    <span class="minutes" id="minute"></span>
+	    <div class="smalltext">Minutes</div>
+	  </div>
+	  <div>
+	    <span class="seconds" id="second"></span>
+	    <div class="smalltext">Seconds</div>
+	  </div>
+	</div> -->
 		<img id="loading-img" src="assets/images/moon.svg">
 	</div>
-	
+
 	<!-- partial -->
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script  src="assets/js/script.js"></script>
-	<script type="text/javascript">
-		const second = 1000,
-      minute = second * 60,
-      hour = minute * 60,
-      day = hour * 24;
+	<footer>
+		<div class="main">
+		<div id="countdown"></div>
 
-let countDown = new Date('Sep 28, 2019 00:00:00').getTime(),
-    x = setInterval(function() {
-
-      let now = new Date().getTime(),
-          distance = countDown - now;
-
-      document.getElementById('days').innerText = Math.floor(distance / (day)),
-        document.getElementById('hours').innerText = Math.floor((distance % (day)) / (hour)),
-        document.getElementById('minutes').innerText = Math.floor((distance % (hour)) / (minute)),
-        document.getElementById('seconds').innerText = Math.floor((distance % (minute)) / second);
-      
-      //do something later when date is reached
-      //if (distance < 0) {
-      //  clearInterval(x);
-      //  'IT'S MY BIRTHDAY!;
-      //}
-
-    }, second)
-	</script>
-
+	</div> </footer>
+	<script  src="assets/js/script.js"></script>
 </body>
 </html>
