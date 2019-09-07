@@ -90,7 +90,7 @@ html
   height: 480px;
 }
 
-h1 {
+/* h1 {
   font-family: "Montserrat", sans-serif;
   text-align: center;
   margin-top: 2em;
@@ -102,7 +102,7 @@ h1 {
 h1 sup {
 	text-transform: lowercase;
 	color: #FF3E41;
-}
+} */
 footer
 {
 	position: fixed;
@@ -113,13 +113,13 @@ footer
 }
 
 #countdown {
-  color: #FFF;
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
-  font-size: 1em;
+  font-size: 0.75em;
   letter-spacing: 5px;
-  margin-top: 5%;
+  margin-top: 8%;
 
 }
 
@@ -153,7 +153,7 @@ footer
 }
 .c-number {
   font-family: "Montserrat", sans-serif;
-  color: #FFF;
+  color: #fff;
   font-size: 1em;
 }
 @keyframes animStar {
