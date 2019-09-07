@@ -931,9 +931,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .fh5co-heading-colored {
   color: #228896;
-  font-size: 30px;
+  font-size: 50px;
 }
-
+@font-face {
+    font-family: 'Cyrano Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Cyrano Regular'), url('cyrano.woff') format('woff');
+}
 .fh5co-cards {
   padding: 1em 0;
   background: #e6e6e6;
@@ -1148,7 +1153,7 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   font-size: 18px;
   margin-bottom: 2em;
   font-weight: 500;
-  text-transform: uppercase;
+  
   letter-spacing: 2px;
 }
 .fh5co-heading.fh5co-light {
