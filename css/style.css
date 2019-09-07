@@ -597,7 +597,7 @@ figure figcaption {
 }
 
 #fh5co-hero {
-  min-height: 500px;
+  min-height: 100%;
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
@@ -1348,18 +1348,18 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   *display: inline;
   width: 30px;
   height: 2px;
-  color: #000;
+  color: #fff;
   font: bold 14px/.4 Helvetica;
   text-transform: uppercase;
   text-indent: -55px;
-  background: #000;
+  background: #fff;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle i::before, .fh5co-nav-toggle i::after {
   content: '';
   width: 30px;
   height: 2px;
-  background: #000;
+  background: #fff;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
@@ -1368,12 +1368,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 }
 .fh5co-nav-toggle.dark i {
   position: relative;
-  color: #000;
-  background: #000;
+  color: #fff;
+  background: #fff;
   transition: all .2s ease-out;
 }
 .fh5co-nav-toggle.dark i::before, .fh5co-nav-toggle.dark i::after {
-  background: #000;
+  background: #fff;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
