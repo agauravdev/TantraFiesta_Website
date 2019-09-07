@@ -1,1 +1,0 @@
-This is the moon landing snippet.
