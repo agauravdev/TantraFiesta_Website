@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WebD Team | Tantrafiesta</title>
+<link rel="icon" type = "image/x-icon" href="img/white_logo.png">
+    <meta name="description" content="Core HTML Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" href="vendor/owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/lightcase/lightcase.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400|Work+Sans:300,400,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link href="https://file.myfontastic.com/7vRKgqrN3iFEnLHuqYhYuL/icons.css" rel="stylesheet">
+
+    <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<style>
+html, body {
+    padding:0;
+    margin:0;
+  }
+
+  .about__section {
+    width:960px;
+    margin:auto;
+  }
+
+  .about__section .about__slot {
+    width:33%;
+    box-sizing: border-box;
+    background-color:#f5f5f5;
+    /*border:1px solid #ccc;*/
+    border-right:none;
+    border-top:none;
+    height:15vw;
+    min-height:350px;
+    min-width:220px;
+    display:inline-block;
+    vertical-align:top;
+    text-align:center;
+    cursor:pointer;
+    position:relative;
+    background-size:0% auto;
+    -webkit-transition:all 0.3s linear;
+    background-position:center center;
+    background-repeat:no-repeat;
+    overflow:hidden;
+  }
+
+  .about__slot .bioText {
+    opacity:0;
+    color:rgba(242,242,242,0);
+    pointer-events:none;
+    position:absolute;
+    top:350px;
+    left:0;
+    right:0;
+    padding:10%;;
+    padding-top:25px;
+    padding-bottom:25px;
+    width:80%;
+    height:0;
+    -webkit-transition:all 0.3s linear;
+    margin:auto;
+  }
+
+  .about__slot.bio .about__info {
+    top:0px;
+    bottom:200px;
+    background-color:rgba(0,0,0,0.42);
+    box-shadow:inset 0px -5px 10px 0 rgba(0,0,0,1);
+  }
+
+  .about__slot.bio .bioText  {
+    opacity:1;
+    border-radius:0;
+   position:absolute;
+    top:50px;
+    padding-top:200px;
+    left:0;
+    right:0;
+    bottom:0;
+    width:80%;
+    height:250px;
+    color:rgba(255,255,255,1);
+    background-color:rgba(42,42,42,0.7);
+    z-index:8;
+    margin:auto;
+    font-family:sans-serif;
+    overflow:auto;
+  }
+
+  .about__slot .about__info {
+    position:absolute;
+    left:0;
+    bottom:0;
+    top:210px;
+    right:0;
+    pointer-events:none;
+    z-index:9;
+    -webkit-transition:all 0.3s linear;
+
+  }
+  /*BOOM */
+  .about__slot .headshot {
+    margin:auto;
+    margin-top:19px;
+    width:172px;
+    height:172px;
+    /*border:10px double #424242;*/
+    background-size:200px 200px;
+    background-position:center 15%;
+    border-radius:100%;
+    box-shadow:0px 2px 10px 2px rgba(0,0,0,0.42);
+    -webkit-transition:all 0.1s ease-in-out;
+    
+  }
+
+  .about__slot.bio .headshot {
+    -webkit-filter:blur(3px);
+    opacity:1;
+    width:100%;
+    height:300px;
+    border-radius:0;
+    margin-top:0;
+    background-size:375px 375px !important;
+    border:0;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+
+  }
+
+  .about__slot .name {
+    font-family:"Typo Grotesk",sans-serif;
+    font-size:20px;
+    font-weight:800;
+    color:#424242;
+    margin-bottom:0px;
+    -webkit-transition:all 0.3s linear;
+  }
+
+  .about__slot .title {
+     font-family:"Typo Grotesk",sans-serif;
+    font-size:16px;
+    font-weight:300;
+    margin-top:5px;
+    color:#ccc;
+    -webkit-transition:all 0.3s linear;
+  }
+
+  .about__slot.bio .name {
+    color:#f5f5f5;
+  }
+
+  .about__section .about__slot:hover .headshot {
+    opacity:1;
+    width:100%;
+    height:300px;
+    border-radius:0;
+    margin-top:0;
+    background-size:325px 325px;
+    border:0;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+  }
+
+  .about__section .about__slot:hover .name {
+    color:#f5f5f5 !important;
+  }
+
+  .about__section .about__slot:hover .about__info {
+      background-color:rgba(0,0,0,0.42);
+  }
+  #rotateimg270 {
+    -webkit-transform:rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  #rotateimg90 {
+    -webkit-transform:rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+{
+
+}
+
+@media only screen and (min-width : 320px){
+=
+}
+
+@media only screen and (min-width : 768px){
+ 
+}
+
+
+</style>
+<script>
+function biograph(e) {
+	if(e.className == 'about__slot') {
+		e.className = 'about__slot bio';
+	}
+	else {
+		e.className = 'about__slot';
+	}
+}
+
+</script>
+
+</head>
+<body data-spy="scroll" data-target="#navbar-nav-header" class="static-layout">
+	<div class="boxed-page" backgrounf>
+				<div class="jumbotron d-flex align-items-center" style="background-image: url(photo-8.jpg)">
+  <div class="container text-center">
+    <h1 class="display-2 mb-4">WebD Team</h1>
+    <div class="about__section"> <!-- Specificity container -->
+<a href="javascript:void(0);" title="Gaurav Agarawal - Head"><div  class="about__slot"><div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('img/1.jpeg');"></div>
+<div class="about__info" >
+<h4 class="name">Gaurav Agarawal</h4>
+<h5 class="title" style="padding:7px;" >Head<br>Website Development Team</h5><center>
+<div class="col-md-6" style="margin-right: 5%"> 
+  <nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
+      <a class="nav-link" href="#">
+        <i class="icon-facebook"></i>
+      </a>
+      <a class="nav-link" href="#">
+        <i class="icon-twitter"></i>
+      </a>
+      <a class="nav-link" href="#">
+        <i class="icon-instagram"></i>
+      </a>
+    
+   
+      </a>
+  </nav>
+</div></center>
+</div>
+
+</div></a><a href="javascript:void(0);" title="Apurv Chandel - Co-Head"><div class="about__slot">
+  <div class="headshot"  onclick="biograph(this.parentNode);" style="background-image:url('img/2.jpg');"></div>
+
+<div class="about__info">
+<h4 class="name">Apurv Chandel</h4>
+<h5 class="title style="padding:7px;"">Co-Head<br>Website Development Team</h5><center>
+  <div class="col-md-6" style="margin-right: 5%"> 
+    <nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
+        <a class="nav-link" href="#">
+          <i class="icon-facebook"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-twitter"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-instagram"></i>
+        </a>
+       
+     
+        </a>
+    </nav>
+  </div></center>
+</div>
+
+ </div></a>
+ <a href="javascript:void(0);" title="Amit Kumar - Co-Head"><div class="about__slot"><div class="headshot" onclick="biograph(this.parentNode);" style="background-image:url('img/4.jpg');"></div>
+<div class="about__info">
+<h4 class="name">Amit Kumar</h4>
+<h5 class="title" style="padding:7px;">Co-Head<br>Website Development Team</h5><center>
+  <div class="col-md-6" style="margin-right: 5%"> 
+    <nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
+        <a class="nav-link" href="#">
+          <i class="icon-facebook"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-twitter"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-instagram"></i>
+        </a>
+       
+     
+        </a>
+    </nav>
+  </div></center>
+</div>
+
+</div>
+</a>
+<a href="javascript:void(0);" title="Aditya Jaishwal - Co-Head"><div class="about__slot">
+  <div class="headshot"  onclick="biograph(this.parentNode);" style="background-image:url('img/3.jpg');"></div>
+
+<div class="about__info">
+<h4 class="name">Aditya Jaishwal</h4>
+<h5 class="title"style="padding:7px;">Co-Head<br>Website Development Team</h5><center>
+  <div class="col-md-6" style="margin-right: 5%"> 
+    <nav class="nav nav-mastfoot justify-content-md-end justify-content-center">
+        <a class="nav-link" href="#">
+          <i class="icon-facebook"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-twitter"></i>
+        </a>
+        <a class="nav-link" href="#">
+          <i class="icon-instagram"></i>
+        </a>
+       
+     
+        </a>
+    </nav>
+  </div></center>
+</div>
+
+ </div></a>
+</div>
+  </div>
+</div>
+</div>
+
+</div>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="vendor/bootstrap/popper.min.js"></script>
+	<script src="vendor/bootstrap/bootstrap.min.js"></script>
+	<script src="vendor/select2/select2.min.js "></script>
+	<script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+	<script src="vendor/isotope/isotope.min.js"></script>
+	<script src="vendor/lightcase/lightcase.js"></script>
+	<script src="vendor/waypoints/waypoint.min.js"></script>
+	<script src="vendor/countTo/jquery.countTo.js"></script>
+
+	<!-- Main JS -->
+	<script src="js/app.min.js "></script>
+	<script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>
